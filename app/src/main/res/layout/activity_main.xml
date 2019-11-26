@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#DBC2C2">
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    >
+
+
+    <TextView
+        style="@style/myStyle"
+        android:text="Room Booking"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvChkinDate"
+        style="@style/myStyle"
+        android:hint="Pick Check-In Date"
+        android:inputType="date" />
+
+    <TextView
+        android:id="@+id/tvChkoutDate"
+        style="@style/myStyle"
+        android:hint="Pick Check-Out Date"
+        android:inputType="date" />
+
+<!--    <TextView-->
+<!--        style="@style/myStyle"-->
+<!--        android:text="Select room type" />-->
+
+    <Spinner
+        android:id="@+id/spnrRoomType"
+        style="@style/myStyle" />
+
+    <TextView
+        android:id="@+id/tvRoomPrice"
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:visibility="invisible" />
+
+    <GridLayout
+        style="@style/myStyle"
+        android:columnCount="3"
+        android:orientation="horizontal"
+        android:rowCount="2">
+
+        <TextView
+            style="@style/myStyle"
+            android:layout_width="wrap_content"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:text="Adult"
+            android:textAlignment="center" />
+
+        <TextView
+            style="@style/myStyle"
+            android:layout_width="wrap_content"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:text="Child"
+            android:textAlignment="center" />
+
+        <TextView
+            style="@style/myStyle"
+            android:layout_width="wrap_content"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:text="Room"
+            android:textAlignment="center"
+
+            />
+
+        <EditText
+            android:id="@+id/etAdult"
+            style="@style/numberACR"
+            android:hint="0"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/etChild"
+            style="@style/numberACR"
+            android:hint="0"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/etRoom"
+            style="@style/numberACR"
+            android:hint="0"
+            android:inputType="number" />
+    </GridLayout>
+
+    <Button
+        android:id="@+id/btnCalculate"
+        style="@style/myStyle"
+        android:text="Calculate" />
+
+    <TextView
+        android:id="@+id/tvResult"
+        style="@style/myStyle" />
+
+
+</LinearLayout>
+</ScrollView>
