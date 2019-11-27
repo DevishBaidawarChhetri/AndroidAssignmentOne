@@ -144,6 +144,8 @@ public class MainActivity extends AppCompatActivity implements DatePickerDialog.
 
         DatePickerDialog datePickerDialog = new DatePickerDialog(
                 this, this, year, month, day);
+
+        datePickerDialog.getDatePicker().setMinDate(c.getTimeInMillis());
         datePickerDialog.show();
     }
 
@@ -166,6 +168,7 @@ public class MainActivity extends AppCompatActivity implements DatePickerDialog.
                 tvChkoutDate.setText(date);
             }
         }, year, month, day);
+        datePickerDialog.getDatePicker().setMinDate(c.getTimeInMillis());
         datePickerDialog.show();
     }
 }
